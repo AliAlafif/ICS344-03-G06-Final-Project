@@ -1,20 +1,13 @@
-# 🛠️ Metasploitable3 Installation Guide
+# 🛠️ Metasploitable3 Installation
 
-This guide provides a **step-by-step walkthrough** for installing **Metasploitable 3** (Ubuntu 14.04 version) as a pre-built OVA file using **Oracle VirtualBox**.
+This provides a **step-by-step walkthrough** for installing **Metasploitable 3** (Ubuntu 14.04 version) as a pre-built OVA file using **Oracle VirtualBox**.
 
----
-
-## 🖼️ Metasploitable3 IP Address
-
-Below is the screenshot showing the output of `ip a` from the victim machine:
-
-![Metasploitable3 IP](./Picture1.png)
 
 ---
 
 ## ✅ Prerequisites
 
-Before you begin, make sure the following are ready:
+Before we begin, we have to get:
 
 - **Oracle VirtualBox:**  
   [Download VirtualBox](https://www.virtualbox.org/)
@@ -22,7 +15,6 @@ Before you begin, make sure the following are ready:
 - **Metasploitable3 OVA file:**  
   [Download from SourceForge](https://sourceforge.net/projects/metasploitable3-ub1404upgraded/files/)
 
-> ℹ️ *Note: The OVA file is a pre-configured virtual machine, which saves time compared to manual setup.*
 
 ---
 
@@ -43,7 +35,6 @@ Before you begin, make sure the following are ready:
 
 - Click **Next**, review settings, and then **Import**.
 
-> 💡 *Tip: It may take several minutes to import, depending on your system's performance.*
 
 ---
 
@@ -76,3 +67,11 @@ Once the VM is running:
 1. Inside **Metasploitable3**, run:
    ```bash
    ifconfig
+
+--- 
+
+## 🖼️ Metasploitable3 IP Address
+
+Below is the screenshot showing the output of `ip a` from the victim machine:
+
+![Metasploitable3 IP](./Picture1.png)
