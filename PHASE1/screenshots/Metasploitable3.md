@@ -4,6 +4,14 @@ This guide provides a **step-by-step walkthrough** for installing **Metasploitab
 
 ---
 
+## 🖼️ Metasploitable3 IP Address
+
+Below is the screenshot showing the output of `ip a` from the victim machine:
+
+![Metasploitable3 IP](./Picture1.png)
+
+---
+
 ## ✅ Prerequisites
 
 Before you begin, make sure the following are ready:
