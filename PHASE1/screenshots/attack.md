@@ -51,6 +51,7 @@ set user_file /usr/share/wordlists/metasploit/unix_users.txt
 set rhosts 192.168.56.101
 exploit
 
+\```
 
 ![nmap](./Picture4.png)
 
