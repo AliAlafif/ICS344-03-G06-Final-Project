@@ -10,10 +10,10 @@ This document Show a **detailed step-by-step guide** to compromising the **Metas
 ## 🌐 Network Information
 
 - **Victim (Metasploitable3) IP:** `192.168.56.101`
-![Metasploitable3 IP](./Picture1.png)
+![Metasploitable3 IP](./image/Picture1.png)
 
 - **Attacker (Kali Linux) IP:** `192.168.56.102`
-![Attacker IP](./Picture2.png)
+![Attacker IP](./image/Picture2.png)
 
 ---
 
@@ -34,7 +34,7 @@ Before launching the attack, we performed reconnaissance to identify open ports 
 sudo nmap -sS -sV -O 192.168.56.101
 ```
 
-![nmap](./Picture3.png)
+![nmap](./image/Picture3.png)
 
 ---
 
@@ -52,7 +52,7 @@ set rhosts 192.168.56.101
 exploit
 ```
 
-![nmap](./Picture4.png)
+![nmap](./image/Picture4.png)
 
 - Credentials found: `vagrant:vagrant`.
 
@@ -61,18 +61,18 @@ exploit
 
 ### **Upgrading the shell to meterpreter:**
 
-![nmap](./Picture5.png)
+![nmap](./image/Picture5.png)
 
 ---
 ### **Post-exploitation:**
 
-![nmap](./Picture6.png)
+![nmap](./image/Picture6.png)
 
 ---
 
 ### **Log-in using SSH port:**
 
-![nmap](./Picture7.png)
+![nmap](./image/Picture7.png)
 
 ---
 
@@ -88,7 +88,7 @@ In this task, we developed a **custom Python script** to automate the brute-forc
 
 ### 📝 **Custom Script Code:**
 
-![nmap](./Picture8.png)
+![nmap](./image/Picture8.png)
 
 ---
 
@@ -102,4 +102,4 @@ The screenshot below shows the execution of our custom Python script (`ssh_attac
 - Successful login output confirms access to the victim machine.
 - Commands like `uname -a` and `whoami` were executed to demonstrate shell access.
 
-![nmap](./Picture9.png)
+![nmap](./image/Picture9.png)
