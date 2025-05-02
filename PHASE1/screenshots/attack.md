@@ -40,6 +40,8 @@ sudo nmap -sS -sV -O 192.168.56.101
 
 ### **Commands Used:**
 
+we will target SSH_port 22 using Brute_force
+
 ```bash
 msfconsole
 use auxiliary/scanner/ssh/ssh_login
