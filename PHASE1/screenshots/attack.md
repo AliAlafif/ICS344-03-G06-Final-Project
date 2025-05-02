@@ -21,6 +21,22 @@ This document Show a **detailed step-by-step guide** to compromising the **Metas
 
 We performed an SSH brute-force attack using the Metasploit framework.
 
+---
+
+
+## 🔎 Nmap Scan: Identifying Open Ports and OS
+
+Before launching the attack, we performed reconnaissance to identify open ports and gather OS information of the victim machine (`192.168.56.101`).
+
+### 🔧 **Nmap Command Used:**
+
+```bash
+sudo nmap -sS -sV -O 192.168.56.101
+
+![nmap](./Picture3.png)
+
+---
+
 ### **Commands Used:**
 
 ```bash
