@@ -52,3 +52,23 @@ sudo /opt/splunk/bin/splunk start --accept-license
 - the logs has been sent to Splunk:
 
 ![splunk interface](./image/Picture13.png)
+
+---
+
+**Check the logs after the attack**
+
+- As we can see, the number of logs is increased 
+![splunk interface](./image/Picture14.png)
+
+- Show the Failed password logs:
+
+![splunk interface](./image/Picture15.png)
+
+-  Visualize the attacks
+* index=* "Failed password" | timechart count:
+![splunk interface](./image/Picture16.png)
+
+* index=* "Failed password" | stats count by host:
+![splunk interface](./image/Picture17.png)
+
+
