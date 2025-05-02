@@ -30,8 +30,9 @@ Before launching the attack, we performed reconnaissance to identify open ports 
 
 ### 🔧 **Nmap Command Used:**
 
-```bash
+\```bash
 sudo nmap -sS -sV -O 192.168.56.101
+\```
 
 ![nmap](./Picture3.png)
 
