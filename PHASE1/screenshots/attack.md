@@ -54,8 +54,52 @@ exploit
 
 ![nmap](./Picture4.png)
 
+- Credentials found: `vagrant:vagrant`.
+
+
 ---
 
 ### **Upgrading the shell to meterpreter:**
 
 ![nmap](./Picture5.png)
+
+---
+### **Post-exploitation:**
+
+![nmap](./Picture6.png)
+
+---
+
+### **Log-in using SSH port:**
+
+![nmap](./Picture7.png)
+
+---
+
+## 🛠️ Task 1.2: Using a Custom Python Script
+
+In this task, we developed a **custom Python script** to automate the brute-force attack on the SSH service of the Metasploitable3 machine (`192.168.56.101`).
+
+### 🔧 **Script Overview:**
+
+- The script uses the `paramiko` library to attempt SSH logins.
+- It iterates over a list of username and password combinations.
+- On successful login, it opens an interactive shell session.
+
+### 📝 **Custom Script Code:**
+
+![nmap](./Picture8.png)
+
+---
+
+### 🖥️ **Script Execution Proof**
+
+The screenshot below shows the execution of our custom Python script (`ssh_attack.py`) on the attacker machine. The script iterated through multiple username and password combinations, and upon finding valid credentials (`vagrant:vagrant`), successfully established an SSH session with the victim machine (`192.168.56.101`).
+
+✅ **Key Observations:**
+
+- Multiple failed login attempts were handled gracefully.
+- Successful login output confirms access to the victim machine.
+- Commands like `uname -a` and `whoami` were executed to demonstrate shell access.
+
+![nmap](./Picture9.png)
