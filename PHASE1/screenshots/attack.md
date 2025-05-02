@@ -26,14 +26,12 @@ In this task, we targeted the **SSH service (port 22)** on Metasploitable3 using
 ## 🔧 Step 1: Launch Metasploit
 
 Open the terminal on your Kali machine and run:
+    ```bash
+    msfconsole
 
-```bash
-msfconsole
+---
 
-🔧 Step 2: Select the SSH Login Module
+## 🔧 Step 2: Select the SSH Login Module
 We are using the ssh_login module, which performs brute-force attacks on SSH:
-
-bash
-Copy
-Edit
-use auxiliary/scanner/ssh/ssh_login
+    ```bash
+    use auxiliary/scanner/ssh/ssh_login
