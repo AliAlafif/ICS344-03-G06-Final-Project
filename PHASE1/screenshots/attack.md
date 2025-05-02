@@ -1,6 +1,6 @@
 # 🚩 Phase 1: Attack Execution
 
-This document provides a **detailed step-by-step guide** to compromising the **Metasploitable3** machine via:
+This document Show a **detailed step-by-step guide** to compromising the **Metasploitable3** machine via:
 
 1. ✅ **Task 1.1:** Using Metasploit framework.
 2. ✅ **Task 1.2:** Using a custom Python script.
@@ -10,7 +10,10 @@ This document provides a **detailed step-by-step guide** to compromising the **M
 ## 🌐 Network Information
 
 - **Victim (Metasploitable3) IP:** `192.168.56.101`
+![Metasploitable3 IP](./Picture1.png)
+
 - **Attacker (Kali Linux) IP:** `192.168.56.102`
+![Attacker IP](./Picture2.png)
 
 ---
 
