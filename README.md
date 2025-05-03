@@ -25,23 +25,23 @@
 ## Work Distribution
 
 - **Phase 1 (Setup & Compromise):**
-  - Setting up Metasploitable3 & Kali Linux: Student 1
-  - Performing Metasploit attack: Student 2
-  - Developing the custom attack script: Student 3
+  - Setting up Metasploitable3 & Kali Linux: Ali
+  - Performing Metasploit attack: Ali
+  - Developing the custom attack script: Saud
 
 - **Phase 2 (SIEM Dashboard Analysis):**
-  - Installing and configuring Splunk: Student 1
-  - Integrating logs & creating visualizations: Student 2
+  - Installing and configuring Splunk: Ali
+  - Integrating logs & creating visualizations: Salman
 
 - **Phase 3 (Defensive Strategy Proposal):**
-  - Defense setup & implementation: Student 3
-  - Testing, validation & documentation: Student 1
+  - Defense setup & implementation: Saud
+  - Testing, validation & documentation: Salman
 
 ---
 
 ## Project Overview
 
-This project follows the requirements from the [ICS344 Course Project Guide](https://github.com/osamacs7/344-Setup-Guide) and is divided into three phases:
+This project follows the requirements from the [ICS344 Course Project Guide] and is divided into three phases:
 
 ### Phase 1: Setup & Compromise the Service
 
@@ -63,7 +63,6 @@ This project follows the requirements from the [ICS344 Course Project Guide](htt
 - **Tool:** Splunk v9.3.2
 - **Setup:**
   - Logs were forwarded from the victim machine to Splunk.
-  - Two indexes were created to track attack logs.
 - **Visualization:**
   - Attack logs (e.g., failed SSH login attempts) were charted using Splunk’s search and visualization tools.
   - Key searches included:
@@ -80,7 +79,4 @@ This project follows the requirements from the [ICS344 Course Project Guide](htt
   - The original attack scripts were re-run post-defense implementation.
   - Logs showed a significant reduction in successful login attempts, demonstrating the effectiveness of the defense.
 
----
-
-## Repository Structure
 
